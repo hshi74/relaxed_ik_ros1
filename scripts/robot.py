@@ -19,7 +19,9 @@ from urdf_parser_py.urdf import URDF
 class Robot:
     def __init__(self, setting_path=None):
         path_to_src = rospkg.RosPack().get_path("relaxed_ik_ros1") + "/relaxed_ik_core"
-        setting_file_path = path_to_src + "/configs/settings.yaml"
+        setting_file_path = (
+            path_to_src + "/../../myohand_description/relaxed_ik_settings.yaml"
+        )
         if setting_path != "":
             setting_file_path = setting_path
         os.chdir(path_to_src)
@@ -30,7 +32,9 @@ class Robot:
 
         urdf_name = settings["urdf"]
 
-        self.robot = URDF.from_xml_file(path_to_src + "/configs/urdfs/" + urdf_name)
+        self.robot = URDF.from_xml_file(
+            path_to_src + "/../../myohand_description/" + urdf_name
+        )
         self.kdl_tree = kdl_tree_from_urdf_model(self.robot)
 
         # all non-fixed joint

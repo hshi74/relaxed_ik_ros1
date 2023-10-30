@@ -1,6 +1,6 @@
 Panels:
   - Class: rviz/Displays
-    Help Height: 78
+    Help Height: 138
     Name: Displays
     Property Tree Widget:
       Expanded:
@@ -9,7 +9,7 @@ Panels:
         - /TF1/Frames1
         - /TF1/Tree1
       Splitter Ratio: 0.592391312122345
-    Tree Height: 1147
+    Tree Height: 972
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -62,52 +62,409 @@ Visualization Manager:
         Expand Joint Details: false
         Expand Link Details: false
         Expand Tree: false
+        IFtip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        IFtip_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        LFtip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        LFtip_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         Link Tree Style: Links in Alphabetic Order
-        base_arm_link:
+        MFtip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        MFtip_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        RFtip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        RFtip_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        THtip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        THtip_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        capitate:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        body:
+        capitate_left:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        finger:
+        cmc_abduction_dummy:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        cmc_abduction_dummy_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        distal_thumb:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        gripper:
+        distal_thumb_left:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        link1:
+        distph2:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        link2:
+        distph2_left:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        link3:
+        distph3:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        link4:
+        distph3_left:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        wrist:
+        distph4:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
+        distph4_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        distph5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        distph5_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fifthmc:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fifthmc_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        firstmc:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        firstmc_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fourthmc:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        fourthmc_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        hamate:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        hamate_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        joint_rx_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        joint_rx_link_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        joint_ry_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        joint_ry_link_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        joint_rz_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        joint_rz_link_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        joint_tx_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        joint_tx_link_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        joint_ty_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        joint_ty_link_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        joint_tz_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        joint_tz_link_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        lunate:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        lunate_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        mcp2_flexion_dummy:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        mcp2_flexion_dummy_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        mcp3_flexion_dummy:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        mcp3_flexion_dummy_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        mcp4_flexion_dummy:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        mcp4_flexion_dummy_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        mcp5_flexion_dummy:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        mcp5_flexion_dummy_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        midph2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        midph2_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        midph3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        midph3_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        midph4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        midph4_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        midph5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        midph5_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pisiform:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        pisiform_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        proximal_thumb:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        proximal_thumb_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        proxph2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        proxph2_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        proxph3:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        proxph3_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        proxph4:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        proxph4_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        proxph5:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        proxph5_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        scaphoid:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        scaphoid_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        secondmc:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        secondmc_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thirdmc:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        thirdmc_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        trapezium:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        trapezium_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        trapezoid:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        trapezoid_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        triquetrum:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        triquetrum_left:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        world:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
       Name: RobotModel
       Robot Description: robot_description
       TF Prefix: ""
@@ -115,20 +472,302 @@ Visualization Manager:
       Value: true
       Visual Enabled: true
     - Class: rviz/TF
-      Enabled: false
+      Enabled: true
+      Filter (blacklist): ""
+      Filter (whitelist): ""
       Frame Timeout: 150
       Frames:
         All Enabled: false
+        IFtip:
+          Value: true
+        IFtip_left:
+          Value: true
+        LFtip:
+          Value: true
+        LFtip_left:
+          Value: true
+        MFtip:
+          Value: true
+        MFtip_left:
+          Value: true
+        RFtip:
+          Value: true
+        RFtip_left:
+          Value: true
+        THtip:
+          Value: true
+        THtip_left:
+          Value: true
+        capitate:
+          Value: true
+        capitate_left:
+          Value: true
+        cmc_abduction_dummy:
+          Value: true
+        cmc_abduction_dummy_left:
+          Value: true
+        distal_thumb:
+          Value: true
+        distal_thumb_left:
+          Value: true
+        distph2:
+          Value: true
+        distph2_left:
+          Value: true
+        distph3:
+          Value: true
+        distph3_left:
+          Value: true
+        distph4:
+          Value: true
+        distph4_left:
+          Value: true
+        distph5:
+          Value: true
+        distph5_left:
+          Value: true
+        fifthmc:
+          Value: true
+        fifthmc_left:
+          Value: true
+        firstmc:
+          Value: true
+        firstmc_left:
+          Value: true
+        fourthmc:
+          Value: true
+        fourthmc_left:
+          Value: true
+        hamate:
+          Value: true
+        hamate_left:
+          Value: true
+        joint_rx_link:
+          Value: true
+        joint_rx_link_left:
+          Value: true
+        joint_ry_link:
+          Value: true
+        joint_ry_link_left:
+          Value: true
+        joint_rz_link:
+          Value: true
+        joint_rz_link_left:
+          Value: true
+        joint_tx_link:
+          Value: true
+        joint_tx_link_left:
+          Value: true
+        joint_ty_link:
+          Value: true
+        joint_ty_link_left:
+          Value: true
+        joint_tz_link:
+          Value: true
+        joint_tz_link_left:
+          Value: true
+        lunate:
+          Value: true
+        lunate_left:
+          Value: true
+        mcp2_flexion_dummy:
+          Value: true
+        mcp2_flexion_dummy_left:
+          Value: true
+        mcp3_flexion_dummy:
+          Value: true
+        mcp3_flexion_dummy_left:
+          Value: true
+        mcp4_flexion_dummy:
+          Value: true
+        mcp4_flexion_dummy_left:
+          Value: true
+        mcp5_flexion_dummy:
+          Value: true
+        mcp5_flexion_dummy_left:
+          Value: true
+        midph2:
+          Value: true
+        midph2_left:
+          Value: true
+        midph3:
+          Value: true
+        midph3_left:
+          Value: true
+        midph4:
+          Value: true
+        midph4_left:
+          Value: true
+        midph5:
+          Value: true
+        midph5_left:
+          Value: true
+        pisiform:
+          Value: true
+        pisiform_left:
+          Value: true
+        proximal_thumb:
+          Value: true
+        proximal_thumb_left:
+          Value: true
+        proxph2:
+          Value: true
+        proxph2_left:
+          Value: true
+        proxph3:
+          Value: true
+        proxph3_left:
+          Value: true
+        proxph4:
+          Value: true
+        proxph4_left:
+          Value: true
+        proxph5:
+          Value: true
+        proxph5_left:
+          Value: true
+        scaphoid:
+          Value: true
+        scaphoid_left:
+          Value: true
+        secondmc:
+          Value: true
+        secondmc_left:
+          Value: true
+        thirdmc:
+          Value: true
+        thirdmc_left:
+          Value: true
+        trapezium:
+          Value: true
+        trapezium_left:
+          Value: true
+        trapezoid:
+          Value: true
+        trapezoid_left:
+          Value: true
+        triquetrum:
+          Value: true
+        triquetrum_left:
+          Value: true
+        world:
+          Value: true
       Marker Alpha: 1
-      Marker Scale: 1
+      Marker Scale: 0.10000000149011612
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: true
       Tree:
-        {}
+        world:
+          joint_tx_link:
+            joint_ty_link:
+              joint_tz_link:
+                joint_rx_link:
+                  joint_ry_link:
+                    joint_rz_link:
+                      lunate:
+                        capitate:
+                          fifthmc:
+                            mcp5_flexion_dummy:
+                              proxph5:
+                                midph5:
+                                  distph5:
+                                    LFtip:
+                                      {}
+                          fourthmc:
+                            mcp4_flexion_dummy:
+                              proxph4:
+                                midph4:
+                                  distph4:
+                                    RFtip:
+                                      {}
+                          hamate:
+                            {}
+                          secondmc:
+                            mcp2_flexion_dummy:
+                              proxph2:
+                                midph2:
+                                  distph2:
+                                    IFtip:
+                                      {}
+                          thirdmc:
+                            mcp3_flexion_dummy:
+                              proxph3:
+                                midph3:
+                                  distph3:
+                                    MFtip:
+                                      {}
+                          trapezium:
+                            cmc_abduction_dummy:
+                              firstmc:
+                                proximal_thumb:
+                                  distal_thumb:
+                                    THtip:
+                                      {}
+                          trapezoid:
+                            {}
+                        pisiform:
+                          {}
+                        scaphoid:
+                          {}
+                        triquetrum:
+                          {}
+          joint_tx_link_left:
+            joint_ty_link_left:
+              joint_tz_link_left:
+                joint_rx_link_left:
+                  joint_ry_link_left:
+                    joint_rz_link_left:
+                      lunate_left:
+                        capitate_left:
+                          fifthmc_left:
+                            mcp5_flexion_dummy_left:
+                              proxph5_left:
+                                midph5_left:
+                                  distph5_left:
+                                    LFtip_left:
+                                      {}
+                          fourthmc_left:
+                            mcp4_flexion_dummy_left:
+                              proxph4_left:
+                                midph4_left:
+                                  distph4_left:
+                                    RFtip_left:
+                                      {}
+                          hamate_left:
+                            {}
+                          secondmc_left:
+                            mcp2_flexion_dummy_left:
+                              proxph2_left:
+                                midph2_left:
+                                  distph2_left:
+                                    IFtip_left:
+                                      {}
+                          thirdmc_left:
+                            mcp3_flexion_dummy_left:
+                              proxph3_left:
+                                midph3_left:
+                                  distph3_left:
+                                    MFtip_left:
+                                      {}
+                          trapezium_left:
+                            cmc_abduction_dummy_left:
+                              firstmc_left:
+                                proximal_thumb_left:
+                                  distal_thumb_left:
+                                    THtip_left:
+                                      {}
+                          trapezoid_left:
+                            {}
+                        pisiform_left:
+                          {}
+                        scaphoid_left:
+                          {}
+                        triquetrum_left:
+                          {}
       Update Interval: 0
-      Value: false
+      Value: true
     - Class: rviz/Marker
       Enabled: false
       Marker Topic: /visualization_marker
@@ -150,7 +789,7 @@ Visualization Manager:
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: body
+    Fixed Frame: world
     Frame Rate: 30
   Name: root
   Tools:
@@ -174,7 +813,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 3.7215304374694824
+      Distance: 0.19796708226203918
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -182,17 +821,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0.6696498990058899
-        Y: -0.0349409282207489
-        Z: 0.33542105555534363
+        X: 0.12753809988498688
+        Y: 0.5781577825546265
+        Z: 0.3360612094402313
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.39479658007621765
+      Pitch: 1.5697963237762451
       Target Frame: <Fixed Frame>
-      Yaw: 1.330790638923645
+      Yaw: 6.268981456756592
     Saved: ~
 Window Geometry:
   Displays:
@@ -200,7 +839,7 @@ Window Geometry:
   Height: 1376
   Hide Left Dock: false
   Hide Right Dock: true
-  QMainWindow State: 000000ff00000000fd0000000400000000000001b600000506fc020000000bfb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d00000506000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb000000280020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000000000000000fb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e006700000001d4000001a60000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000000000000000000000010000016c0000037cfc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a0056006900650077007300000000280000037c000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000032900000058fc0100000002fb0000000800540069006d00650000000000000003290000041800fffffffb0000000800540069006d00650100000000000004500000000000000000000007fc0000050600000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000400000000000001f7000004c4fc020000000bfb0000001200530065006c0065006300740069006f006e00000001e10000009b000000b000fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000b0fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000006e000004c40000018200fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb000000280020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000000000000000fb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e006700000001d4000001a60000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720000000000ffffffff0000000000000000000000010000016c0000037cfc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a0056006900650077007300000000280000037c0000013200fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000032900000058fc0100000002fb0000000800540069006d00650000000000000003290000077d00fffffffb0000000800540069006d00650100000000000004500000000000000000000007b5000004c400000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -210,5 +849,5 @@ Window Geometry:
   Views:
     collapsed: true
   Width: 2488
-  X: 72
-  Y: 27
+  X: 144
+  Y: 54

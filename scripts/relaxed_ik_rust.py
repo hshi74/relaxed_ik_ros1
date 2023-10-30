@@ -13,58 +13,71 @@ from relaxed_ik_ros1.srv import IKPose, IKPoseResponse
 from relaxed_ik_ros1.msg import EEPoseGoals, EEVelGoals
 from geometry_msgs.msg import Point
 from std_msgs.msg import Float64
-from sensor_msgs.msg import JointState 
+from sensor_msgs.msg import JointState
 from urdf_parser_py.urdf import URDF
 from kdl_parser import kdl_tree_from_urdf_model
 import PyKDL as kdl
 from robot import Robot
 
-path_to_src = rospkg.RosPack().get_path('relaxed_ik_ros1') + '/relaxed_ik_core'
-sys.path.insert(1, path_to_src + '/wrappers')
+path_to_src = rospkg.RosPack().get_path("relaxed_ik_ros1") + "/relaxed_ik_core"
+sys.path.insert(1, path_to_src + "/wrappers")
 from python_wrapper import RelaxedIKRust
+
 
 class RelaxedIK:
     def __init__(self):
         rospy.sleep(1)
 
-        default_setting_file_path = path_to_src + '/configs/settings.yaml'
+        default_setting_file_path = path_to_src + "/configs/settings.yaml"
 
         setting_file_path = ""
-        try: 
-            setting_file_path = rospy.get_param('~setting_file_path')
+        try:
+            setting_file_path = rospy.get_param("~setting_file_path")
         except:
             pass
 
         if setting_file_path == "":
-            print("Rviz viewer: no setting file path is given, using the default setting file -- {}".format(default_setting_file_path))
+            print(
+                "Rviz viewer: no setting file path is given, using the default setting file -- {}".format(
+                    default_setting_file_path
+                )
+            )
             setting_file_path = default_setting_file_path
 
-        try: 
-            self.use_visualization = rospy.get_param('~use_visualization')
+        try:
+            self.use_visualization = rospy.get_param("~use_visualization")
         except:
             self.use_visualization = False
 
-        os.chdir(path_to_src )
+        os.chdir(path_to_src)
 
         # Load the infomation
-        
+
         print("setting_file_path: ", setting_file_path)
-        setting_file = open(setting_file_path, 'r')
+        setting_file = open(setting_file_path, "r")
         settings = yaml.load(setting_file, Loader=yaml.FullLoader)
-       
-        urdf_file = open(path_to_src + '/configs/urdfs/' + settings["urdf"], 'r')
+
+        urdf_file = open(
+            path_to_src + "/../../myohand_description/" + settings["urdf"], "r"
+        )
         urdf_string = urdf_file.read()
-        rospy.set_param('robot_description', urdf_string)
+        rospy.set_param("robot_description", urdf_string)
 
         self.relaxed_ik = RelaxedIKRust(setting_file_path)
 
         # Services
-        self.ik_pose_service = rospy.Service('relaxed_ik/solve_pose', IKPose, self.handle_ik_pose)
+        self.ik_pose_service = rospy.Service(
+            "relaxed_ik/solve_pose", IKPose, self.handle_ik_pose
+        )
 
         # Publishers
-        self.angles_pub = rospy.Publisher('relaxed_ik/joint_angle_solutions', JointState, queue_size=1)
+        self.angles_pub = rospy.Publisher(
+            "relaxed_ik/joint_angle_solutions", JointState, queue_size=1
+        )
         if self.use_visualization:
-            self.vis_ee_pub = rospy.Publisher('relaxed_ik/vis_ee_poses', EEPoseGoals, queue_size=1)
+            self.vis_ee_pub = rospy.Publisher(
+                "relaxed_ik/vis_ee_poses", EEPoseGoals, queue_size=1
+            )
 
         self.robot = Robot(setting_file_path)
 
@@ -72,25 +85,26 @@ class RelaxedIK:
         self.js_msg.name = self.robot.articulated_joint_names
         self.js_msg.position = []
 
-        if 'starting_config' not in settings:
-            settings['starting_config'] = [0.0] * len(self.js_msg.name)
+        if "starting_config" not in settings:
+            settings["starting_config"] = [0.0] * len(self.js_msg.name)
         else:
-            assert len(settings['starting_config']) == len(self.js_msg.name), \
-                    "Starting config length does not match the number of joints"
+            assert len(settings["starting_config"]) == len(
+                self.js_msg.name
+            ), "Starting config length does not match the number of joints"
             for i in range(len(self.js_msg.name)):
-                self.js_msg.position.append( settings['starting_config'][i] )
-        
+                self.js_msg.position.append(settings["starting_config"][i])
+
         # Subscribers
-        rospy.Subscriber('/relaxed_ik/ee_pose_goals', EEPoseGoals, self.pose_goals_cb)
-        rospy.Subscriber('/relaxed_ik/ee_vel_goals', EEVelGoals, self.pose_vels_cb)
-        rospy.Subscriber('/relaxed_ik/reset', JointState, self.reset_cb)
+        rospy.Subscriber("/relaxed_ik/ee_pose_goals", EEPoseGoals, self.pose_goals_cb)
+        rospy.Subscriber("/relaxed_ik/ee_vel_goals", EEVelGoals, self.pose_vels_cb)
+        rospy.Subscriber("/relaxed_ik/reset", JointState, self.reset_cb)
 
         print("\nSolver RelaxedIK initialized!\n")
 
     def get_ee_pose(self):
         ee_poses = self.relaxed_ik.get_ee_positions()
         ee_poses = np.array(ee_poses)
-        ee_poses = ee_poses.reshape((len(ee_poses)//6, 6))
+        ee_poses = ee_poses.reshape((len(ee_poses) // 6, 6))
         ee_poses = ee_poses.tolist()
         return ee_poses
 
@@ -123,7 +137,9 @@ class RelaxedIK:
             vis_msg.tolerances = req.tolerances
             self.vis_ee_pub.publish(vis_msg)
 
-        ik_solution = self.relaxed_ik.solve_position(positions, orientations, tolerances)
+        ik_solution = self.relaxed_ik.solve_position(
+            positions, orientations, tolerances
+        )
 
         self.js_msg.header.stamp = rospy.Time.now()
         self.js_msg.position = ik_solution
@@ -163,7 +179,9 @@ class RelaxedIK:
                 for j in range(6):
                     tolerances.append(0.0)
 
-        ik_solution = self.relaxed_ik.solve_position(positions, orientations, tolerances)
+        ik_solution = self.relaxed_ik.solve_position(
+            positions, orientations, tolerances
+        )
 
         # Publish the joint angle solution
         self.js_msg.header.stamp = rospy.Time.now()
@@ -192,7 +210,9 @@ class RelaxedIK:
                 for j in range(6):
                     tolerances.append(0.0)
 
-        ik_solution = self.relaxed_ik.solve_velocity(linear_vels, angular_vels, tolerances)
+        ik_solution = self.relaxed_ik.solve_velocity(
+            linear_vels, angular_vels, tolerances
+        )
 
         assert len(ik_solution) == len(self.robot.articulated_joint_names)
 
@@ -201,7 +221,8 @@ class RelaxedIK:
         self.js_msg.position = ik_solution
         self.angles_pub.publish(self.js_msg)
 
-if __name__ == '__main__':
-    rospy.init_node('relaxed_ik')
+
+if __name__ == "__main__":
+    rospy.init_node("relaxed_ik")
     relaxed_ik = RelaxedIK()
     rospy.spin()
